@@ -60,7 +60,10 @@ peopleIds = {'Tristan Wiley': '100000250991175',
 'Noah Moroze': '100003046714844',
 'Campion Fellin': '100003279925222',
 'John Tran': '100002630705962',
-'Steven Shang': '100004054732119'}
+'Steven Shang': '100004054732119',
+'Adam Gefkovicz': '1443713892',
+'Ben Herman': '100002163865823'
+}
 
 peopleInfo = [
 {'name': 'Tristan Wiley', 'url': baseUrl + '100000250991175' + endUrl},
@@ -122,6 +125,12 @@ peopleInfo = [
 {'name': 'Noah Moroze', 'url': 'https://scontent.fzty2-1.fna.fbcdn.net/v/t1.0-9/14316909_921695414608674_7882783706517828815_n.jpg?oh=5743b1ef371ac18a0673ade5d32dd195&oe=5A5C45A7'},
 {'name': 'Vinay Kasat', 'url': baseUrl + '100003006012440' + endUrl},
 {'name': 'Bill Chen', 'url': baseUrl + '100003049323816' + endUrl},
+
+{'name': 'Ben Herman', 'url': 'https://scontent.fzty2-1.fna.fbcdn.net/v/t1.0-9/1959253_600513396697450_1886741596_n.jpg?oh=b1f4b91fdbb2a12a7cec8a315f80634f&oe=5A5B60A6'},
+{'name': 'Adam Gefkovicz', 'url': 'https://scontent.fzty2-1.fna.fbcdn.net/v/t31.0-8/20448985_10214751432766449_3558451584537970730_o.jpg?oh=c62afe27b4c97bfab2a427408672d3bb&oe=5A60E713'},
+{'name': 'Adam Gefkovicz', 'url': 'https://scontent.fzty2-1.fna.fbcdn.net/v/t1.0-9/19146116_10214259166380097_8600704548622388770_n.jpg?oh=7c0436a97ac08c5f056732bc5ab66a84&oe=5A5FABCB'},
+{'name': 'Adam Gefkovicz', 'url': 'https://scontent.fzty2-1.fna.fbcdn.net/v/t31.0-8/15271818_10212085814567660_7014080868790294522_o.jpg?oh=8270dad12f7f1d6285ac656a94373515&oe=5A54A76D'},
+{'name': 'Adam Gefkovicz', 'url': 'https://scontent.fzty2-1.fna.fbcdn.net/v/t1.0-9/13669842_10210674514846049_4626268138049724528_n.jpg?oh=8c6958fb33f6225555443bcd60fb746a&oe=5A40685C'},
 
 
 {'name': 'Campion Fellin', 'url': 'https://scontent.fzty2-1.fna.fbcdn.net/v/t31.0-8/17390379_1260031627449489_8802200252481370085_o.jpg?oh=c4275f373e6c4d52bf4e1b8eed745e59&oe=5A4E0338'},
