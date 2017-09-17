@@ -1,17 +1,24 @@
 import base64
 import sys
 import subprocess
+import time
 
 
 def decode_image(encoded_image, filename):
 	print("yooooo")
-
+	print(filename)
 	with open(filename, "wb") as fh:
 		print("in here")
 		fh.write(encoded_image.decode('base64'))
-		subprocess.call('../upload.sh', shell=True)
+		#f = open("./blah.txt", "w")
+		blah = subprocess.Popen('../upload.sh', shell=True)
+		blah.wait()
+		time.sleep(3)
+		#f.close()
+	
 
 def test():
+	print("hiiiiiii")
 	img_data = sys.argv[1]
 
 	#print(img_data)

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-git add .
-git commit -m "uploading woo"
-git push origin master
+echo 'hi';
 
-sleep 3
+git add .;
+git commit -m "uploading woo";
+git push origin master;
