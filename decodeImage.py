@@ -16,10 +16,13 @@ def decode_image(encoded_image, filename):
 		# subprocess.call(["git", "commit"], shell=True)
 		# subprocess.call(["git", "push"], shell=True)
 
-
-		f = open("./blah.txt", "w")
-		blah = subprocess.Popen('../upload.sh', shell=True, stdout=f)
-		blah.wait()
+		from subprocess import call
+		call('git add .', shell = True)
+		call('git commit -m "commiting..."', shell = True)
+		call('git push origin master --force', shell = True)
+		# f = open("./blah.txt", "w")
+		# blah = subprocess.Popen('../upload.sh', shell=True, stdout=f)
+		# blah.wait()
 		#print blah.returncode
 		#time.sleep(3)
 		#f.close()
