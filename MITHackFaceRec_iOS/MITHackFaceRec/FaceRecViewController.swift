@@ -26,6 +26,7 @@ class FaceRecViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupUI()
+        networkManager.delegate = self
         networkManager.sendImage(image: imageToRecognize) { (error) in
             print(error.debugDescription)
         }

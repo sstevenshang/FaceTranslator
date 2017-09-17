@@ -17,7 +17,7 @@ class NetworkController: NSObject {
     
     static var imageRequestCount: Int = 0
     
-    let delegate: NetworkControllerProtocol? = nil
+    var delegate: NetworkControllerProtocol? = nil
     
     static public func createAlertViewController(title: String, message: String) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -103,16 +103,26 @@ class NetworkController: NSObject {
         
         currentTask = session.dataTask(with: request) { (data, response, error) in
             
-            print(error?.localizedDescription)
+            print(error?.localizedDescription ?? "no error in response")
+            
             NetworkController.imageRequestCount += 1
-            completionHandler(nil)
-            if let delegate = self.delegate, let data = data {
-                if let name = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as String? {
-                    
-                    print(name)
-                    delegate.displayResult(name: name)
-                }
+            
+            guard let delegate = self.delegate else {
+                print("no delegate found for network manager")
+                return
             }
+            
+            guard let data = data else {
+                print("no data found in response")
+                return
+            }
+            
+            guard let name = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else {
+                print("no string gotten from data")
+                return
+            }
+            
+            delegate.displayResult(name: name as String)
         }
         
         if let currentTask = currentTask {
