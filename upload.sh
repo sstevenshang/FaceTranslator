@@ -7,11 +7,11 @@ REPO_DIR=/Users/campionfellin/Desktop/hackmit/FaceTranslator
 
 cd ${REPO_DIR};
 
+${GIT} rm -r --cached .;
+
 ${GIT} add .;
 
 ${GIT} commit -m "uploading woo";
-
-sleep 1
 
 ${GIT} push origin master;
 
