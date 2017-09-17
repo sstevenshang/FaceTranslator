@@ -6,7 +6,7 @@
 
 1. First, you need to set up the Face Group on MSFT Cognitive Services
 
-	...Change the `Ocp-Apim-Subscription-Key` in
+	..1. Change the `Ocp-Apim-Subscription-Key` in
 
 ```
 
@@ -22,7 +22,7 @@
 ```
 
 in `setupPersonGroup.py` to your Face API Key.
-	...you may want to change the photo files found in the array `peopleInfo` to photos of you choosing in the same format as we have
+	..2. you may want to change the photo files found in the array `peopleInfo` to photos of you choosing in the same format as we have
 
 
 
