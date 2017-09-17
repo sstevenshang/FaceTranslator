@@ -9,24 +9,53 @@ import json
 
 
 
-url = 'https://www.facebook.com/keshav.gupta.28/about?lst=100003279925222%3A100018139210752%3A1505647969'
+# url = 'https://www.facebook.com/keshav.gupta.28/about?lst=100003279925222%3A100018139210752%3A1505647969'
+
+# urls = [
+# 	'https://www.facebook.com/keshav.gupta.28/about?lst=100003279925222%3A100018139210752%3A1505647969',
+# 	'https://www.facebook.com/alyssia.jovellanos/about?lst=100003279925222%3A503591958%3A1505649241',
+# 	'https://www.facebook.com/cpellaton/about?lst=100003279925222%3A542778746%3A1505649264',
+# 	'https://www.facebook.com/cyrayden/about?lst=100003279925222%3A554878779%3A1505649369',
+# 	'https://www.facebook.com/gregboerman/about?lst=100003279925222%3A571025972%3A1505649380',
+# 	'https://www.facebook.com/harshita.yerramreddy/about?lst=100003279925222%3A586523567%3A1505649381',
+# 	'https://www.facebook.com/charles.a.malenfant/about?lst=100003279925222%3A596419033%3A1505649402',
+# 	'https://www.facebook.com/benji.pelletier/about?lst=100003279925222%3A618290888%3A1505649403',
+# 	'https://www.facebook.com/vicky.shao.54/about?lst=100003279925222%3A651123274%3A1505649404',
+# 	'https://www.facebook.com/stasrutkowski/about?lst=100003279925222%3A665599561%3A1505649434',
+# 	'https://www.facebook.com/ArtePermacultura/about?lst=100003279925222%3A669255542%3A1505649436',
+# 	'https://www.facebook.com/hamzah.khan.397/about?lst=100003279925222%3A670318163%3A1505649437',
+# 	'https://www.facebook.com/antomasini98/about?lst=100003279925222%3A711777640%3A1505649440'
+# 'https://www.facebook.com/kothariaditya7/about?lst=100003279925222%3A770860233%3A1505650597',
+# 'https://www.facebook.com/vaibzishere/about?lst=100003279925222%3A850725005%3A1505650601',
+# 'https://www.facebook.com/notmahi/about?lst=100003279925222%3A1011395336%3A1505650602',
+# 'https://www.facebook.com/Catheryn.Li/about?lst=100003279925222%3A1016013452%3A1505650604',
+# 'https://www.facebook.com/chen.x.dawn/about?lst=100003279925222%3A1027604391%3A1505650676',
+# 'https://www.facebook.com/rebca.vandeven/about?lst=100003279925222%3A1030208314%3A1505650679',
+# 'https://www.facebook.com/daniyal.waitforit.ahmed/about?lst=100003279925222%3A1065739636%3A1505650688',
+# 'https://www.facebook.com/edward.she/about?lst=100003279925222%3A1114555158%3A1505650816',
+# 'https://www.facebook.com/RoiSinoff/about?lst=100003279925222%3A1167596300%3A1505650821',
+# 'https://www.facebook.com/evonnengineer/about?lst=100003279925222%3A1210777741%3A1505650827',
+# 'https://www.facebook.com/ligier.michael/about?lst=100003279925222%3A1229049259%3A1505650854',
+# 'https://www.facebook.com/jonxmak/about?lst=100003279925222%3A1238531143%3A1505650855',
+# 'https://www.facebook.com/kastan.day/about?lst=100003279925222%3A1247533932%3A1505650859',
+# 'https://www.facebook.com/mrkevinshum/about?lst=100003279925222%3A1252966223%3A1505650860'
+
+
+# ]
 
 urls = [
-	'https://www.facebook.com/keshav.gupta.28/about?lst=100003279925222%3A100018139210752%3A1505647969',
-	'https://www.facebook.com/alyssia.jovellanos/about?lst=100003279925222%3A503591958%3A1505649241',
-	'https://www.facebook.com/cpellaton/about?lst=100003279925222%3A542778746%3A1505649264',
-	'https://www.facebook.com/cyrayden/about?lst=100003279925222%3A554878779%3A1505649369',
-	'https://www.facebook.com/gregboerman/about?lst=100003279925222%3A571025972%3A1505649380',
-	'https://www.facebook.com/harshita.yerramreddy/about?lst=100003279925222%3A586523567%3A1505649381',
-	'https://www.facebook.com/charles.a.malenfant/about?lst=100003279925222%3A596419033%3A1505649402',
-	'https://www.facebook.com/benji.pelletier/about?lst=100003279925222%3A618290888%3A1505649403',
-	'https://www.facebook.com/vicky.shao.54/about?lst=100003279925222%3A651123274%3A1505649404',
-	'https://www.facebook.com/stasrutkowski/about?lst=100003279925222%3A665599561%3A1505649434',
-	'https://www.facebook.com/ArtePermacultura/about?lst=100003279925222%3A669255542%3A1505649436',
-	'https://www.facebook.com/hamzah.khan.397/about?lst=100003279925222%3A670318163%3A1505649437',
-	'https://www.facebook.com/antomasini98/about?lst=100003279925222%3A711777640%3A1505649440'
+	'https://www.facebook.com/faridasabry/about?lst=100003279925222%3A1342823696%3A1505651384',
+	'https://www.facebook.com/mwang97/about?lst=100003279925222%3A1325535406%3A1505651386',
+	'https://www.facebook.com/alyssa.chen.39/about?lst=100003279925222%3A1320032131%3A1505651387',
+	'https://www.facebook.com/zhao.li.XD/about?lst=100003279925222%3A1310735205%3A1505651388',
+	'https://www.facebook.com/apasp/about?lst=100003279925222%3A1422675265%3A1505651442',
+	'https://www.facebook.com/leononme/about?lst=100003279925222%3A1455503088%3A1505651446',
+	'https://www.facebook.com/kartikye.mittal/about?lst=100003279925222%3A1457300650%3A1505651447',
+	'https://www.facebook.com/wangtiffanysj/about?lst=100003279925222%3A1463569628%3A1505651450',
+	'https://www.facebook.com/kavitha.dee.9/about?lst=100003279925222%3A1478034418%3A1505651451'
 
 ]
+
 
 # print(url.find('%3A'))
 # print(url.find('%3A', 67))
