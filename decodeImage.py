@@ -2,6 +2,8 @@ import base64
 import sys
 import subprocess
 import time
+# import git
+# from git import Repo, remote
 
 
 def decode_image(encoded_image, filename):
@@ -10,9 +12,15 @@ def decode_image(encoded_image, filename):
 	with open(filename, "wb") as fh:
 		print("in here")
 		fh.write(encoded_image.decode('base64'))
+		# subprocess.call(["git", "add"], shell=True)
+		# subprocess.call(["git", "commit"], shell=True)
+		# subprocess.call(["git", "push"], shell=True)
+
+
 		f = open("./blah.txt", "w")
-		blah = subprocess.Popen('../upload.sh', shell=True, stdout=f)
+		blah = subprocess.Popen('../upload.sh', shell=True, stdout=subprocess.PIPE)
 		blah.wait()
+		print blah.returncode
 		time.sleep(3)
 		f.close()
 	
