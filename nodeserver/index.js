@@ -25,8 +25,12 @@ app.post('/', (request, response) => {
 
 	    console.log("The file was saved!");
 	    var filename = request.body.image.file_name;
-	    var newFilename = filename.substring(0, filename.length - 3);
+	    var newFilename = filename.substring(0, filename.length - 4);
+	    var toAdd = Math.random(0,100000);
+	    newFilename += toAdd + ".jpg";
 	    console.log(newFilename);
+	    filename = newFilename;
+	    console.log(filename);
 
 	    // where = filename.indexOf(".") - 1;
 	    // theNum = parseInt(filename.charAt(where)) - 1
