@@ -107,6 +107,7 @@ rm 'nodeserver/blah.txt'
 rm 'nodeserver/face0.jpg'
 rm 'nodeserver/face1.jpg'
 rm 'nodeserver/face2.jpg'
+rm 'nodeserver/face3.jpg'
 rm 'nodeserver/imagedata'
 rm 'nodeserver/imagedata.txt'
 rm 'nodeserver/index.js'
@@ -1160,8 +1161,3 @@ rm 'steven.jpg'
 rm 'test.py'
 rm 'test.pyc'
 rm 'upload.sh'
-[master 41be85c] uploading woo
- 5 files changed, 3 insertions(+), 2 deletions(-)
- create mode 100644 nodeserver/face3.jpg
- rewrite nodeserver/imagedata.txt (66%)
-done
