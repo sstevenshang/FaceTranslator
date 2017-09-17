@@ -33,6 +33,21 @@ in `setupPersonGroup.py` to your Face API Key.
 	run `python -c import setupPersonGroup as p; p.train()` and to check when it is done run `python -c import setupPersonGroup as p; p.getStatus()`
 
 
+3. Now setup some other stuff
+
+	in `test.py` change the `Ocp-Apim-Subscription-Key` again as per earlier.
+
+4. Now start up ngrok
+
+	look up ngrok and start a server on your device, should be using port 8000
+	copy that server url into the iOS code
+
+5. cd into the `nodeserver` folder and run `node index.js`
+
+6. use iPhone to take or upload photo, you should be good to go
+
+
+
 =======
 ## Inspiration
 Adding people on Facebook can be so cumbersome because you have to ask for their username or look them up. We wanted to invent a new way to add people on Facebook that is efficient and fun. So we came up with Face2Book!
@@ -54,4 +69,10 @@ Microsoft Azure
 
 ## What's next for FaceTranslator
 Add more data!
+
+## Made By:
+
+	@campionfellin
+	@GrayTurtle
+	@sstevenshang
 
