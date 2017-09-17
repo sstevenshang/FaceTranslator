@@ -16,7 +16,7 @@ ${GIT} add .;
 
 ${GIT} commit -m "uploading woo";
 
-${GIT} push -u origin master remote;
+${GIT} push -u origin master;
 
 sleep 2 
 
