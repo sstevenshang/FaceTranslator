@@ -42,23 +42,18 @@ app.post('/', (request, response) => {
 	  if (err) throw err;
 	  // results is an array consisting of messages collected during execution
 	  	console.log('results: %j', results);
-		var options = {
+
+		var options2 = {
 			  args: ['https://raw.githubusercontent.com/sstevenshang/FaceTranslator/master/nodeserver/' + filename]
 		};
 
-		PythonShell.run('../test.py', options, function (err, results) {
+		PythonShell.run('../test.py', options2, function (err, results) {
 		  if (err) throw err;
 		  // results is an array consisting of messages collected during execution
 		  console.log('results: %j', results);
 		});
 
 	});
-	response.send("nice");
-	
-
-
-
-
 
 	response.send("nice");
 
