@@ -2,7 +2,7 @@
 
 echo 'hi';
 
-
+GIT = `which git`;
 REPO_DIR=/Users/campionfellin/Desktop/hackmit/FaceTranslator;
 cd ${REPO_DIR};
 
