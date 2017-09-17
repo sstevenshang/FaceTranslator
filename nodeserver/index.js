@@ -50,8 +50,9 @@ app.post('/', (request, response) => {
 		PythonShell.run('../test.py', options2, function (err, results) {
 		  if (err) throw err;
 		  // results is an array consisting of messages collected during execution
-		  console.log('results: %j', results);
-		  response.send("nice");
+		  //console.log('results: %j', results);
+		  console.log(results[results.length-1])
+		  response.send(results[results.length-1])
 		});
 
 	});
