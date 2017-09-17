@@ -52,7 +52,7 @@ app.post('/', (request, response) => {
 		  // results is an array consisting of messages collected during execution
 		  //console.log('results: %j', results);
 		  console.log(results[results.length-1])
-		  response.send("nice");
+		  response.send(results[results.length-1])
 		});
 
 	});
