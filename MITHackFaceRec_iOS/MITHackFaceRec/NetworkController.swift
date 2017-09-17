@@ -36,13 +36,17 @@ class NetworkController: NSObject {
     
     func sendImage(image: UIImage, completionHandler: @escaping ((_ error: networkErrors?)->())) {
         
-        startNetworkRequestAlamofire(urlString: "18.10.4.234", image: image, completionHandler: completionHandler)
+        //startNetworkRequestAlamofire(urlString: "http://f64213b6.ngrok.io", image: image, completionHandler: completionHandler)
+        startNetworkRequest(urlString: "http://f64213b6.ngrok.io", image: image, completionHandler: completionHandler)
+        
     }
     
     private func startNetworkRequestAlamofire(urlString: String, image: UIImage, completionHandler: @escaping ((_ error: networkErrors?)->())) {
         
         if let imageData = UIImageJPEGRepresentation(image, 0.9) {
             Alamofire.upload(imageData, to: urlString).response(completionHandler: { (response) in
+                print(response.error?.localizedDescription)
+                print(response.request)
                 guard let data = response.data else {
                     print("Received no data back")
                     return
@@ -83,7 +87,7 @@ class NetworkController: NSObject {
         }
         let base64String = imageData.base64EncodedString(options: Data.Base64EncodingOptions.init(rawValue: 0))
         let filename = "face\(NetworkController.imageRequestCount).jpg"
-        let params = ["image":[ "content_type": "image/jpeg", "filename":"\(filename)", "file_data": base64String]]
+        let params = ["image":[ "content_type": "image/jpeg", "filename":"\(filename)", "file_data": "hi"]]//base64String]]
         
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions.init(rawValue: 0))
@@ -95,10 +99,11 @@ class NetworkController: NSObject {
         
         let session = URLSession.shared
         
-        print(base64String)
+        // print(base64String)
         
         currentTask = session.dataTask(with: request) { (data, response, error) in
             
+            print(error?.localizedDescription)
             NetworkController.imageRequestCount += 1
             completionHandler(nil)
             if let delegate = self.delegate, let data = data {
