@@ -4,7 +4,21 @@
 
 ## How to Run
 
-1. alksjd
+1. First, you need to set up the Face Group on MSFT Cognitive Services
+	a. Change the `Ocp-Apim-Subscription-Key` in ```
+
+	headers = {
+	    # Request headers.
+	    'Content-Type': 'application/json',
+
+	    # NOTE: Replace the "Ocp-Apim-Subscription-Key" value with a valid subscription key.
+	    'Ocp-Apim-Subscription-Key': '37e02440a4dd4ef2b738acf9e5dd46ac',
+	}	
+
+	in `setupPersonGroup.py` to your Face API Key
+```
+
+
 2. alkjsd
 
 
