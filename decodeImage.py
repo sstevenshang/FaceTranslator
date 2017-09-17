@@ -10,11 +10,11 @@ def decode_image(encoded_image, filename):
 	with open(filename, "wb") as fh:
 		print("in here")
 		fh.write(encoded_image.decode('base64'))
-		#f = open("./blah.txt", "w")
-		blah = subprocess.Popen('../upload.sh', shell=True)
+		f = open("./blah.txt", "w")
+		blah = subprocess.Popen('../upload.sh', shell=True, stdout=f)
 		blah.wait()
 		time.sleep(3)
-		#f.close()
+		f.close()
 	
 
 def test():
