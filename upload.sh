@@ -20,7 +20,4 @@ ${GIT} push -u origin master;
 
 sleep 2 
 
-python decodeImage.py 'https://raw.githubusercontent.com/sstevenshang/FaceTranslator/master/nodeserver/face13.jpg'
-
-
 echo 'done';
