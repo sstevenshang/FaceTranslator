@@ -21,18 +21,19 @@ def scrape(page_url):
     name = name[23:name.find("|", 23)]
 
     profiles[id] = name
+    print("'name': '" + name + "', 'url': baseUrl + '" + id + "' + endUrl")
+    #{'name': 'Jenny Li', 'url': baseUrl + '1463239405' + endUrl},
+
 
 def getProfiles():
     return profiles
 
 if __name__=="__main__":
-    page_urls = ["https://www.facebook.com/sstevenshang","https://www.facebook.com/jj4192", "https://www.facebook.com/futurebitleadership",
-        "https://www.facebook.com/CatTurtle", "https://www.facebook.com/max.kessler.50", "https://www.facebook.com/sirhype?pnref=lhc.unseen",
-        "https://www.facebook.com/mewsicat", "https://www.facebook.com/moin1998?pnref=lhc.friends", "https://www.facebook.com/profile.php?id=100021687960888"
-        ,"https://www.facebook.com/helentheread"]
+    page_urls = ["https://www.facebook.com/100003006012440", "https://www.facebook.com/billchen99",
+        "https://www.facebook.com/profile.php?id=100003105798600"]
+
 
     for page_url in page_urls:
         scrape(page_url)
 
-    print(profiles)
     getProfiles()
