@@ -8,6 +8,60 @@ endUrl = '/picture?type=large'
 
 #{'name': '', 'url': ''},
 
+peopleIds = {'Tristan Wiley': '100000250991175',
+'Abigail Gomez': '100021687960888',
+'Timothy Glinski': '100011600352566',
+'Darius Bopp': '100015093614245',
+'Kendyll Hicks ': '100011269059197',
+'Tejasvi Nareddy ': '100009254604287',
+'Kyle Swanson': '100000603823463',
+'Laura Eckman': '100000401767973',
+'Aaron Vontell': '100000350713059',
+'Yasmeen Roumie': '100009219651315',
+'Rohan Shah': '1475570764',
+'Nadia Asif': '100007984215053',
+'Alvin Zhang': '100009871129330',
+'Meghan Davis': '100009851710081',
+'Ajay Ramesh': '100009428228709',
+'Charles Vorbach': '100008404685491',
+'Justin Wei': '100008315821612',
+'Alyssia Jovellanos': '503591958',
+'Cooper Pellaton': '542778746',
+'Charles Antoine Malenfant': '596419033',
+'Benji Pelletier': '618290888',
+'Vicky Shao': '651123274',
+'Stas Rutkowski': '665599561',
+'Antonella Masini': '711777640',
+'Vaibhav Gupta': '850725005',
+'Mahi Nur Muhammad': '1011395336',
+'Dawn Chen Xi': '1027604391',
+'Rebca van de Ven': '1030208314',
+'Daniyal Ahmed': '1065739636',
+'Farida Sabry': '1342823696',
+'Michael Wang': '1325535406',
+'Kartikye Mittal': '1457300650',
+'Kavitha Dhanukodi': '1478034418',
+'Kimberli Zhong': '1481127456',
+'Lance McCarthy': '1484328157',
+'Sean Bae': '1492027223',
+'Kexin Zhang': '1507772617',
+'Kenny Friedman': '1515890562',
+'Karumanchi Pradeep': '1518466071',
+'Aditya Khanna': '1529203443',
+'Christie Xu': '1543441270',
+'Lily Chen': '1598960421',
+'Akshit Singla': '1684253978',
+'Justin Wei': '100008315821612',
+'Vinay Kasat': '100003006012440',
+'Bill Chen': '100003049323816',
+'Claire Nord': '100001735263697',
+'Neena Dugar': '100001360088260',
+'Edwin Zhang': '520511148',
+'Noah Moroze': '100003046714844',
+'Campion Fellin': '100003279925222',
+'John Tran': '100002630705962',
+'Steven Shang': '100004054732119'}
+
 peopleInfo = [
 {'name': 'Tristan Wiley', 'url': baseUrl + '100000250991175' + endUrl},
 {'name': 'Abigail Gomez', 'url': baseUrl + '100021687960888' + endUrl},
@@ -152,34 +206,37 @@ def main():
             #print("**********")
             #print(person['name'])
             justNames.append(person['name'])
-            addPerson(person['name'], True, person['url'])
+            addPerson(person['name'], True, person['url'], peopleIds.get(person['name']))
 
 
 
 def getEveryone():
-	body = "{}"
-	try:
-	    conn = httplib.HTTPSConnection('eastus2.api.cognitive.microsoft.com')
-	    conn.request("GET", "/face/v1.0/persongroups/firstgroupid/persons", body, headers)
-	    response = conn.getresponse()
-	    data = json.loads(response.read())
+    body = "{}"
+    try:
+        conn = httplib.HTTPSConnection('eastus2.api.cognitive.microsoft.com')
+        conn.request("GET", "/face/v1.0/persongroups/firstgroupid/persons", body, headers)
+        response = conn.getresponse()
+        data = json.loads(response.read())
 
 	    #print(response.reason)
-	    #print(data)
-
-	    return data
+        #print(data)
+        #sys.exit(0)
+        return data
 	    #print(response)
 
-	    conn.close()
-	except Exception as e:
-	    print("[Errno {0}] {1}".format(e.errno, e.strerror))
+        conn.close()
+    except Exception as e:
+        print("[Errno {0}] {1}".format(e.errno, e.strerror))
 
 
 
 
-def addPerson(name, isNew, imageURL):
+def addPerson(name, isNew, imageURL, uid):
+    if uid == None:
+        print("shit")
+        uid = "1234"
 
-    body = "{ 'name': '" + name + "', 'userData':'generic information I guess' }"
+    body = "{ 'name': '" + name + "', 'userData':" + uid + "}"
     try:
 
         conn = httplib.HTTPSConnection('eastus2.api.cognitive.microsoft.com')

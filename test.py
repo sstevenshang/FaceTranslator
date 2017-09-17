@@ -37,13 +37,13 @@ def getFaceId(url):
         #body = "{'url': 'https://scontent.fzty2-1.fna.fbcdn.net/v/t31.0-8/13244261_939245159506499_4022522226824089791_o.jpg?oh=5aa0f305d66e10116de106e1d2bf447c&oe=5A483B2C'}"
         print("*************")
         print(url)
-        #body = "{'url': '" + url + "'}"
-        body = "{'url': 'https://raw.githubusercontent.com/sstevenshang/FaceTranslator/master/nodeserver/face4.jpg'}"
+        body = "{'url': '" + url + "'}"
+        #body = "{'url': 'https://raw.githubusercontent.com/sstevenshang/FaceTranslator/master/nodeserver/face4.jpg'}"
         conn = httplib.HTTPSConnection('eastus2.api.cognitive.microsoft.com')
         conn.request("POST", "/face/v1.0/detect/", body, headers)
         response = conn.getresponse()
         data = json.loads(response.read())
-
+        print(body)
         print("ayo hey")
         print(response.reason)
         print(data[0]['faceId'])
@@ -84,6 +84,9 @@ def idFace(faceId):
             everyone = spg.getEveryone()
             for person in everyone:
                 if (foundHim == person['personId']):
+
+
+                    print('https://facebook.com/' + person['userData'])
                     #print(person['personId'])
                     print(person['name'])
 
