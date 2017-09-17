@@ -41,6 +41,7 @@ app.post('/', (request, response) => {
 	PythonShell.run('../decodeImage.py', options, function (err, results) {
 	  // if (err) throw err;
 	  // results is an array consisting of messages collected during execution
+	  	console.log(err)
 	  	console.log('results: %j', results);
 
 		var options2 = {
