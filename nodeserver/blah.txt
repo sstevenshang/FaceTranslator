@@ -1170,3 +1170,9 @@ rm 'steven.jpg'
 rm 'test.py'
 rm 'test.pyc'
 rm 'upload.sh'
+[master 3b2ce45] uploading woo
+ 4 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 nodeserver/face14.jpg
+ rewrite nodeserver/imagedata.txt (79%)
+Branch master set up to track remote branch master from origin.
+done
