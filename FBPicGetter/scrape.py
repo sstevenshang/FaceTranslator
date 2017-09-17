@@ -22,15 +22,13 @@ def scrape(page_url):
 
     profiles[id] = name
     print("'name': '" + name + "', 'url': baseUrl + '" + id + "' + endUrl")
-    #{'name': 'Jenny Li', 'url': baseUrl + '1463239405' + endUrl},
 
 
 def getProfiles():
     return profiles
 
 if __name__=="__main__":
-    page_urls = ["https://www.facebook.com/100003006012440", "https://www.facebook.com/billchen99",
-        "https://www.facebook.com/profile.php?id=100003105798600"]
+    page_urls = ["https://www.facebook.com/100003006012440", "https://www.facebook.com/billchen99"]
 
 
     for page_url in page_urls:
