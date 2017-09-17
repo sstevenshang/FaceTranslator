@@ -84,17 +84,26 @@
                                     <action selector="restartButtonPressed:" destination="RG2-GY-l7W" eventType="touchUpInside" id="x3E-OM-dGM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2p-M2-22M">
+                                <rect key="frame" x="125.5" y="569.5" width="124" height="30"/>
+                                <state key="normal" title="Open in Facebook"/>
+                                <connections>
+                                    <action selector="openInFacebookButtonPressed:" destination="RG2-GY-l7W" eventType="touchUpInside" id="Pvs-zG-uQ6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9GF-N3-qZi" firstAttribute="top" secondItem="zd0-IK-Gjs" secondAttribute="top" constant="50" id="1Iv-0r-Qiy"/>
                             <constraint firstItem="kMX-w9-qgC" firstAttribute="top" secondItem="YeM-w5-jMa" secondAttribute="bottom" constant="25" id="2Jv-9p-Iug"/>
                             <constraint firstItem="vE1-GC-ZbS" firstAttribute="centerX" secondItem="zd0-IK-Gjs" secondAttribute="centerX" id="8Xw-86-eEl"/>
+                            <constraint firstItem="e2p-M2-22M" firstAttribute="top" secondItem="vE1-GC-ZbS" secondAttribute="bottom" constant="25" id="BZF-Bh-C6b"/>
                             <constraint firstItem="9GF-N3-qZi" firstAttribute="centerX" secondItem="zd0-IK-Gjs" secondAttribute="centerX" id="BiM-Sl-xOt"/>
                             <constraint firstItem="YeM-w5-jMa" firstAttribute="centerX" secondItem="zd0-IK-Gjs" secondAttribute="centerX" id="EMM-ag-VXA"/>
                             <constraint firstItem="vE1-GC-ZbS" firstAttribute="top" secondItem="kMX-w9-qgC" secondAttribute="bottom" constant="25" id="Jfh-ft-8fQ"/>
                             <constraint firstItem="YeM-w5-jMa" firstAttribute="top" secondItem="9GF-N3-qZi" secondAttribute="bottom" constant="25" id="PvI-J7-0BG"/>
                             <constraint firstItem="kMX-w9-qgC" firstAttribute="centerX" secondItem="zd0-IK-Gjs" secondAttribute="centerX" id="fwi-0C-bmQ"/>
+                            <constraint firstItem="e2p-M2-22M" firstAttribute="centerX" secondItem="zd0-IK-Gjs" secondAttribute="centerX" id="hLy-8e-bw0"/>
                             <constraint firstItem="YeM-w5-jMa" firstAttribute="centerY" secondItem="zd0-IK-Gjs" secondAttribute="centerY" constant="100" id="nee-IR-8Zs"/>
                         </constraints>
                     </view>
@@ -102,6 +111,7 @@
                         <outlet property="faceImage" destination="9GF-N3-qZi" id="iEB-ZY-zCY"/>
                         <outlet property="loadingIndicator" destination="YeM-w5-jMa" id="eYV-Hd-FRq"/>
                         <outlet property="nameLabel" destination="kMX-w9-qgC" id="2BH-9j-0tA"/>
+                        <outlet property="openInFacebookButton" destination="e2p-M2-22M" id="VMs-7Q-f3P"/>
                         <outlet property="restartButton" destination="vE1-GC-ZbS" id="7qS-En-OiK"/>
                     </connections>
                 </viewController>

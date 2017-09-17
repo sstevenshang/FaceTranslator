@@ -1,6 +1,10 @@
 # Face2Book
 
 ## Technologies Used
+* Facebook Graph API
+* Microsoft Azure Face API
+* Python
+* Swift
 
 ## How to Run
 
@@ -63,9 +67,9 @@ Getting the data set from Facebook
 Graph API only gets friends who use the Graph API
 
 ## What we learned
-Facebook scraping
-Facebook Graph API
-Microsoft Azure
+* Facebook scraping
+* Facebook Graph API
+* Microsoft Azure
 
 ## What's next for FaceTranslator
 Add more data!
