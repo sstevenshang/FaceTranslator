@@ -21,7 +21,7 @@ def decode_image(encoded_image, filename):
 		blah = subprocess.Popen('../upload.sh', shell=True, stdout=f)
 		blah.wait()
 		#print blah.returncode
-		time.sleep(3)
+		#time.sleep(3)
 		#f.close()
 	
 

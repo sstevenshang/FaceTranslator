@@ -11,6 +11,8 @@ ${GIT} add .;
 
 ${GIT} commit -m "uploading woo";
 
+sleep 1
+
 ${GIT} push origin master;
 
 sleep 2 
