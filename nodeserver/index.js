@@ -41,7 +41,11 @@ app.post('/', (request, response) => {
 	  	console.log('results: %j', results);
 
 	  	setTimeout(function() {
-	  		var options2 = {
+	  		console.log("aslkjd");
+	  	}, 3000);
+
+
+		var options2 = {
 			  args: ['https://raw.githubusercontent.com/sstevenshang/FaceTranslator/master/nodeserver/' + filename]
 		};
 
@@ -54,13 +58,6 @@ app.post('/', (request, response) => {
 		});
 
 	});
-	  		console.log("aslkjd");
-	  	}, 3000);
-
-	console.log("uoooo");
-
-
-		
 	}); 
 
 
