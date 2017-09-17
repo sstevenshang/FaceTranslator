@@ -17,12 +17,12 @@ def decode_image(encoded_image, filename):
 		# subprocess.call(["git", "push"], shell=True)
 
 
-		f = open("./blah.txt", "w")
-		blah = subprocess.Popen('../upload.sh', shell=True, stdout=subprocess.PIPE)
-		blah.wait()
-		print blah.returncode
+		#f = open("./blah.txt", "w")
+		subprocess.call('../upload.sh', shell=True)
+		#blah.wait()
+		#print blah.returncode
 		time.sleep(3)
-		f.close()
+		#f.close()
 	
 
 def test():

@@ -2,16 +2,15 @@
 
 echo 'hi';
 
-GIT = `which git`;
-REPO_DIR=/Users/campionfellin/Desktop/hackmit/FaceTranslator;
+GIT=`which git`
+REPO_DIR=/Users/campionfellin/Desktop/hackmit/FaceTranslator
 cd ${REPO_DIR};
 
+${GIT} add .;
 
-git add .;
+${GIT} commit -m "uploading woo";
 
-git commit -m "uploading woo";
-
-git push origin head
+${GIT} push origin head
 
 
 echo 'done';
