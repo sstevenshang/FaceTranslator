@@ -51,11 +51,12 @@ app.post('/', (request, response) => {
 		  if (err) throw err;
 		  // results is an array consisting of messages collected during execution
 		  console.log('results: %j', results);
+		  response.send("nice");
 		});
 
 	});
 
-	response.send("nice");
+
 
 })
 
