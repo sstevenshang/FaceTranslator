@@ -6,8 +6,6 @@ import requests
 import sys
 import urllib.request
 
-
-
 page_url = ("https://www.facebook.com/sstevenshang")
 
 def scrape():
@@ -16,20 +14,12 @@ def scrape():
     request = requests.get(page_url)
     soup = BeautifulSoup(root, 'lxml')
 
-    
-
-#    print(soup.html.prettify())
-
-#    for blah in soup.html.body.meta.find_all("content"):
-#    	print(blah)
-
-
-#div class="_5h60"
     for hi in soup.find_all(id="pagelet_timeline_main_column"):
-       myString = hi['data-gt']
-       print(myString[18:myString.find("\"", 18)])
+       id = hi['data-gt']
+       print(id[18:id.find("\"", 18)])
 
-    #print(soup.find_all(id="pagelet_timeline_main_column")[0].contents[0])
+    name = str(soup.find_all(id="pageTitle"))
+    print(name[23:name.find("|", 23)])
 
 
 if __name__=="__main__":
