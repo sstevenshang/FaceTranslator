@@ -24,7 +24,7 @@ app.post('/', (request, response) => {
 	    }
 
 	    console.log("The file was saved!");
-	    var filename = request.body.image.filename;
+	    var filename = request.body.image.file_name;
 	//console.log(request.body.image.file_data);
 	console.log(filename);
 	console.log("--------------");
