@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MITHackFaceRec" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSv-wN-8at">
+                                <rect key="frame" x="142" y="318" width="91" height="30"/>
+                                <state key="normal" title="Take A Photo"/>
+                                <connections>
+                                    <action selector="takePhotoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sAb-a1-kFL"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="peI-ae-ANa">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cSv-wN-8at" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PG0-hF-f3Q"/>
+                            <constraint firstItem="cSv-wN-8at" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lxk-sw-dts"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="peI-ae-ANa" id="QUJ-xP-1gC"/>
+                        <outlet property="takePhotoButton" destination="cSv-wN-8at" id="5fb-YS-Iax"/>
+                        <segue destination="RG2-GY-l7W" kind="show" identifier="showFaceRecViewController" id="0C5-q5-4iH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="37"/>
+        </scene>
+        <!--Face Rec View Controller-->
+        <scene sceneID="dG4-rd-5Bf">
+            <objects>
+                <viewController id="RG2-GY-l7W" customClass="FaceRecViewController" customModule="MITHackFaceRec" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dbq-ZW-pPS"/>
+                        <viewControllerLayoutGuide type="bottom" id="jCJ-w1-ImK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zd0-IK-Gjs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9GF-N3-qZi">
+                                <rect key="frame" x="13.5" y="50" width="348.5" height="348.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9GF-N3-qZi" secondAttribute="height" multiplier="1:1" id="g17-ZU-avI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recognizing Your Face" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMX-w9-qgC">
+                                <rect key="frame" x="100" y="468.5" width="174" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="YeM-w5-jMa">
+                                <rect key="frame" x="177.5" y="423.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vE1-GC-ZbS">
+                                <rect key="frame" x="162" y="514.5" width="50" height="30"/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restartButtonPressed:" destination="RG2-GY-l7W" eventType="touchUpInside" id="x3E-OM-dGM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9GF-N3-qZi" firstAttribute="top" secondItem="zd0-IK-Gjs" secondAttribute="top" constant="50" id="1Iv-0r-Qiy"/>
+                            <constraint firstItem="kMX-w9-qgC" firstAttribute="top" secondItem="YeM-w5-jMa" secondAttribute="bottom" constant="25" id="2Jv-9p-Iug"/>
+                            <constraint firstItem="vE1-GC-ZbS" firstAttribute="centerX" secondItem="zd0-IK-Gjs" secondAttribute="centerX" id="8Xw-86-eEl"/>
+                            <constraint firstItem="9GF-N3-qZi" firstAttribute="centerX" secondItem="zd0-IK-Gjs" secondAttribute="centerX" id="BiM-Sl-xOt"/>
+                            <constraint firstItem="YeM-w5-jMa" firstAttribute="centerX" secondItem="zd0-IK-Gjs" secondAttribute="centerX" id="EMM-ag-VXA"/>
+                            <constraint firstItem="vE1-GC-ZbS" firstAttribute="top" secondItem="kMX-w9-qgC" secondAttribute="bottom" constant="25" id="Jfh-ft-8fQ"/>
+                            <constraint firstItem="YeM-w5-jMa" firstAttribute="top" secondItem="9GF-N3-qZi" secondAttribute="bottom" constant="25" id="PvI-J7-0BG"/>
+                            <constraint firstItem="kMX-w9-qgC" firstAttribute="centerX" secondItem="zd0-IK-Gjs" secondAttribute="centerX" id="fwi-0C-bmQ"/>
+                            <constraint firstItem="YeM-w5-jMa" firstAttribute="centerY" secondItem="zd0-IK-Gjs" secondAttribute="centerY" constant="100" id="nee-IR-8Zs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faceImage" destination="9GF-N3-qZi" id="iEB-ZY-zCY"/>
+                        <outlet property="loadingIndicator" destination="YeM-w5-jMa" id="eYV-Hd-FRq"/>
+                        <outlet property="nameLabel" destination="kMX-w9-qgC" id="2BH-9j-0tA"/>
+                        <outlet property="restartButton" destination="vE1-GC-ZbS" id="7qS-En-OiK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nvc-JB-pxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="38"/>
+        </scene>
+    </scenes>
+</document>
