@@ -18,7 +18,11 @@ class FaceRecViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var openInFacebookButton: UIButton!
+    
     var imageToRecognize: UIImage!
+    
+    var linkToFacebook: String?
     
     let networkManager = NetworkController()
     
@@ -43,6 +47,7 @@ class FaceRecViewController: UIViewController {
             self.faceImage.image = self.imageToRecognize
             self.loadingIndicator.startAnimating()
             self.nameLabel.text = "Recognizing Your Face"
+            self.openInFacebookButton.isEnabled = false
         }
     }
     
@@ -52,9 +57,25 @@ class FaceRecViewController: UIViewController {
         }
     }
     
+    @IBAction func openInFacebookButtonPressed(_ sender: Any) {
+        if let urlString = linkToFacebook {
+            if let url = URL(string: urlString) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                print("Couldn't get url!")
+            }
+        } else {
+            print("No URL specified!")
+        }
+    }
+    
     fileprivate func displayName(name: String) {
-        self.loadingIndicator.stopAnimating()
-        self.nameLabel.text = "Your Name is \(name)!"
+        
+        DispatchQueue.main.async {
+            self.loadingIndicator.stopAnimating()
+            self.nameLabel.text = "Your Name is \(name)!"
+            self.openInFacebookButton.isEnabled = true
+        }
     }
     
     /*
@@ -71,7 +92,7 @@ class FaceRecViewController: UIViewController {
 
 extension FaceRecViewController: NetworkControllerProtocol {
 
-    func displayResult(name: String) {
+    func displayResult(name: String, link: String) {
         self.displayName(name: name)
     }
 }

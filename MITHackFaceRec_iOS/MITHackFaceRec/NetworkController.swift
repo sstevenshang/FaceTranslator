@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 protocol NetworkControllerProtocol {
-    func displayResult(name: String)
+    func displayResult(name: String, link: String)
 }
 
 class NetworkController: NSObject {
@@ -42,18 +42,25 @@ class NetworkController: NSObject {
     }
     
     private func startNetworkRequestAlamofire(urlString: String, image: UIImage, completionHandler: @escaping ((_ error: networkErrors?)->())) {
-        
+        //depricated
+
         if let imageData = UIImageJPEGRepresentation(image, 0.9) {
             Alamofire.upload(imageData, to: urlString).response(completionHandler: { (response) in
-                print(response.error?.localizedDescription)
-                print(response.request)
+                
                 guard let data = response.data else {
                     print("Received no data back")
                     return
                 }
                 
-                if let name = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as String? {
-                    self.delegate?.displayResult(name: name)
+                if let responseString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as String? {
+                    
+                    print(responseString)
+                    
+                    let responseArray = responseString.components(separatedBy: ":")
+                    let name = responseArray[0]
+                    let link = responseArray[1]
+                    
+                    self.delegate?.displayResult(name: name, link: link)
                 }
             })
         } else {
@@ -63,7 +70,7 @@ class NetworkController: NSObject {
     }
     
     func stopSending() {
-        //
+        //depricated
     }
     
     private func startNetworkRequest(urlString: String, image: UIImage, completionHandler: @escaping ((_ error: networkErrors?)->())) {
@@ -117,12 +124,18 @@ class NetworkController: NSObject {
                 return
             }
             
-            guard let name = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else {
+            guard let responseString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else {
                 print("no string gotten from data")
                 return
             }
             
-            delegate.displayResult(name: name as String)
+            print(responseString)
+            
+            let responseArray = responseString.components(separatedBy: "|")
+            let name = responseArray[0]
+            let link = responseArray[1]
+            
+            self.delegate?.displayResult(name: name, link: link)
         }
         
         if let currentTask = currentTask {
