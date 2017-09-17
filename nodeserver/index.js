@@ -24,11 +24,22 @@ app.post('/', (request, response) => {
 	    }
 
 	    console.log("The file was saved!");
-	}); 
+	    var filename = request.body.image.file_name;
+	    var newFilename = filename.substring(0, filename.length - 4);
+	    var toAdd = Math.random(0,100000);
+	    newFilename += toAdd + ".jpg";
+	    console.log(newFilename);
+	    filename = newFilename;
+	    console.log(filename);
 
-
-
-	var filename = request.body.image.filename;
+	    // where = filename.indexOf(".") - 1;
+	    // theNum = parseInt(filename.charAt(where)) - 1
+	    // console.log(where);
+	    // console.log(theNum);
+	    // filename = filename.substring(0,where) + theNum +  ".jpg"
+	    console.log("***********")
+	    console.log(filename)
+	    console.log("***********")
 	//console.log(request.body.image.file_data);
 	console.log(filename);
 	console.log("--------------");
@@ -39,9 +50,16 @@ app.post('/', (request, response) => {
 	};
 
 	PythonShell.run('../decodeImage.py', options, function (err, results) {
-	  // if (err) throw err;
+	  	 //if (err) throw err;
 	  // results is an array consisting of messages collected during execution
+	  	console.log(err)
 	  	console.log('results: %j', results);
+
+	  	setTimeout(function() {
+	  		console.log("aslkjd");
+	  	}, 3000);
+
+
 
 		var options2 = {
 			  args: ['https://raw.githubusercontent.com/sstevenshang/FaceTranslator/master/nodeserver/' + filename]
@@ -56,6 +74,11 @@ app.post('/', (request, response) => {
 		});
 
 	});
+	}); 
+
+
+
+	
 
 
 
