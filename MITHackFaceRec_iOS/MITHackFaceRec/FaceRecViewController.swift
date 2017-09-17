@@ -31,6 +31,9 @@ class FaceRecViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupUI()
         networkManager.delegate = self
+        
+        // let rotatedImage = imageToRecognize.rotateNinetyDegree()
+        
         networkManager.sendImage(image: imageToRecognize) { (error) in
             print(error.debugDescription)
         }
@@ -58,11 +61,19 @@ class FaceRecViewController: UIViewController {
     }
     
     @IBAction func openInFacebookButtonPressed(_ sender: Any) {
+        
         if let urlString = linkToFacebook {
+            
+            print(urlString)
+            
             if let url = URL(string: urlString) {
+                
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                
             } else {
+                
                 print("Couldn't get url!")
+                
             }
         } else {
             print("No URL specified!")
@@ -93,8 +104,38 @@ class FaceRecViewController: UIViewController {
 extension FaceRecViewController: NetworkControllerProtocol {
 
     func displayResult(name: String, link: String) {
+        self.linkToFacebook = link
         self.displayName(name: name)
     }
+}
+
+extension UIImage {
+    
+    public func rotateNinetyDegree() -> UIImage {
+        
+        let cgImage = self.cgImage!
+        let LARGEST_SIZE = CGFloat(max(self.size.width, self.size.height))
+        let context = CGContext.init(data: nil, width:Int(LARGEST_SIZE), height:Int(LARGEST_SIZE), bitsPerComponent: cgImage.bitsPerComponent, bytesPerRow: 0, space: cgImage.colorSpace!, bitmapInfo: cgImage.bitmapInfo.rawValue)!
+        
+        var drawRect = CGRect.zero
+        drawRect.size = self.size
+        let drawOrigin = CGPoint(x: (LARGEST_SIZE - self.size.width) * 0.5,y: (LARGEST_SIZE - self.size.height) * 0.5)
+        drawRect.origin = drawOrigin
+        var tf = CGAffineTransform.identity
+        tf = tf.translatedBy(x: LARGEST_SIZE * 0.5, y: LARGEST_SIZE * 0.5)
+        tf = tf.rotated(by: CGFloat(Double.pi / 2))
+        tf = tf.translatedBy(x: LARGEST_SIZE * -0.5, y: LARGEST_SIZE * -0.5)
+        context.concatenate(tf)
+        context.draw(cgImage, in: drawRect)
+        var rotatedImage = context.makeImage()!
+        
+        drawRect = drawRect.applying(tf)
+        
+        rotatedImage = rotatedImage.cropping(to: drawRect)!
+        let resultImage = UIImage(cgImage: rotatedImage)
+        return resultImage
+    }
+    
 }
 
 

@@ -94,7 +94,7 @@ class NetworkController: NSObject {
         }
         let base64String = imageData.base64EncodedString(options: Data.Base64EncodingOptions.init(rawValue: 0))
         let filename = "face\(NetworkController.imageRequestCount).jpg"
-        let params = ["image":[ "content_type": "image/jpeg", "filename":"\(filename)", "file_data": base64String]]
+        let params = ["image":[ "content_type": "image/jpeg", "file_name":"\(filename)", "file_data": base64String]]
         
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions.init(rawValue: 0))
