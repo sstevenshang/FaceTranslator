@@ -28,7 +28,9 @@ in `setupPersonGroup.py` to your Face API Key.
  Then run `python setupPersonGroup.py`
 
 
-2. alkjsd
+2. Now you need to train the group
+
+	run `python -c import setupPersonGroup as p; p.train()` and to check when it is done run `python -c import setupPersonGroup as p; p.getStatus()`
 
 
 =======
