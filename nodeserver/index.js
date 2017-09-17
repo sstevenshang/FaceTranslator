@@ -40,6 +40,10 @@ app.post('/', (request, response) => {
 	  	console.log(err)
 	  	console.log('results: %j', results);
 
+	  	setTimeout(function() {
+
+	  	}, 2000);
+
 		var options2 = {
 			  args: ['https://raw.githubusercontent.com/sstevenshang/FaceTranslator/master/nodeserver/' + filename]
 		};
