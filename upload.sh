@@ -13,7 +13,7 @@ ${GIT} add .;
 
 ${GIT} commit -m "uploading woo";
 
-${GIT} push origin head
+${GIT} push origin master;
 
 
 echo 'done';
