@@ -101,6 +101,7 @@
                     <connections>
                         <outlet property="faceImage" destination="9GF-N3-qZi" id="iEB-ZY-zCY"/>
                         <outlet property="loadingIndicator" destination="YeM-w5-jMa" id="eYV-Hd-FRq"/>
+                        <outlet property="nameLabel" destination="kMX-w9-qgC" id="2BH-9j-0tA"/>
                         <outlet property="restartButton" destination="vE1-GC-ZbS" id="7qS-En-OiK"/>
                     </connections>
                 </viewController>
