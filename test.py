@@ -74,7 +74,7 @@ def idFace(faceId):
         #print(response.reason)
         #print(data)
         if (len(data[0]['candidates']) == 0):
-            print("oh fuck not found")
+            print("Sorry, we do not have enough information to identify this person. Try again later!")
             #sys.exit(0)
         else:
             #print(data[0]['candidates'][0]['personId'])
