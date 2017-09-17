@@ -25,7 +25,7 @@ in `setupPersonGroup.py` to your Face API Key.
 	
  you may want to change the photo files found in the array `peopleInfo` to photos of you choosing in the same format as we have
 
-
+ Then run `python setupPersonGroup.py`
 
 
 2. alkjsd
