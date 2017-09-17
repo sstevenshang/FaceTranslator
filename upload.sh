@@ -13,6 +13,6 @@ ${GIT} commit -m "uploading woo";
 
 ${GIT} push origin master;
 
-sleep(2)
+sleep 2 
 
 echo 'done';
