@@ -4,6 +4,10 @@
 
 ## How to Run
 
+1. alksjd
+2. alkjsd
+
+
 =======
 ## Inspiration
 Adding people on Facebook can be so cumbersome because you have to ask for their username or look them up. We wanted to invent a new way to add people on Facebook that is efficient and fun. So we came up with Face2Book!
