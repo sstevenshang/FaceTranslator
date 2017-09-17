@@ -43,7 +43,7 @@ app.post('/', (request, response) => {
 	  // results is an array consisting of messages collected during execution
 	  	console.log('results: %j', results);
 		var options = {
-			  args: ['https://raw.githubusercontent.com/sstevenshang/FaceTranslator/master/' + filename]
+			  args: ['https://raw.githubusercontent.com/sstevenshang/FaceTranslator/master/nodeserver/' + filename]
 		};
 
 		PythonShell.run('../test.py', options, function (err, results) {

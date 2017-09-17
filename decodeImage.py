@@ -4,11 +4,13 @@ import subprocess
 
 
 def decode_image(encoded_image, filename):
+	print("hihihihih")
+	sys.exit(0)
 
 	with open(filename, "wb") as fh:
 		print("in here")
 		fh.write(encoded_image.decode('base64'))
-		subprocess.call('upload.sh', shell=True)
+		subprocess.call('../upload.sh', shell=True)
 
 def test():
 	img_data = sys.argv[1]
