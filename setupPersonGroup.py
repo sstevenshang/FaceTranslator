@@ -3,6 +3,23 @@ import httplib, urllib, base64, json, sys
 nameKeySet = []
 justNames = []
 
+baseUrl = 'https://graph.facebook.com/'
+endUrl = '/picture?type=large'
+
+peopleInfo = [
+{'name': 'Jenny Li', 'url': baseUrl + '1463239405' + endUrl},
+{'name': 'Max Kessler', 'url': baseUrl + '100012701701839' + endUrl},
+{'name': 'John Tran', 'url': baseUrl + '100002630705962' + endUrl},
+{'name': 'Tristan Wiley', 'url': baseUrl + '100000250991175' + endUrl},
+{'name': 'Moin Nadeem', 'url': baseUrl + '1378665934' + endUrl},
+{'name': 'Abigail Gomez', 'url': baseUrl + '100021687960888' + endUrl},
+{'name': 'Lawrence Yan', 'url': baseUrl + '100001148022412' + endUrl},
+{'name': 'Helen Read ', 'url': baseUrl + '100010677484404' + endUrl},
+{'name': 'Steven  Shang', 'url': baseUrl + '100004054732119' + endUrl},
+{'name': 'Silvia Knappe', 'url': baseUrl + '100007016496050' + endUrl}
+]
+
+
 headers = {
     # Request headers.
     'Content-Type': 'application/json',
@@ -120,6 +137,7 @@ def deletePerson(person):
 
 
 def train():
+    body = ""
     try:
 
         #personId = "10c69ca3-3c4b-427b-b777-a4c8582df20c"
@@ -134,9 +152,11 @@ def train():
 
         conn.close()
     except Exception as e:
-        print("[Errno {0}] {1}".format(e.errno, e.strerror))
+        print(e)
+        #print("[Errno {0}] {1}".format(e.errno, e.strerror))
 
 def getStatus():
+    body = ""
     try:
 
         #personId = "10c69ca3-3c4b-427b-b777-a4c8582df20c"
@@ -146,13 +166,31 @@ def getStatus():
         data = response.read()
 
         # print(response.reason)
-        # print(data)
+        print(data)
         #print(response)
 
         conn.close()
     except Exception as e:
         print("[Errno {0}] {1}".format(e.errno, e.strerror))
 
+
+def makePersonGroup():
+    try:
+
+        conn = httplib.HTTPSConnection('eastus2.api.cognitive.microsoft.com')
+        conn.request("PUT", "/face/v1.0/persongroups/firstgroupid/", body, headers)
+        response = conn.getresponse()
+        data = json.loads(response.read())
+
+        #print(response.reason)
+        #print(data)
+
+
+        #print(response)
+
+        conn.close()
+    except Exception as e:
+        print("[Errno {0}] {1}".format(e.errno, e.strerror))
 
 
 

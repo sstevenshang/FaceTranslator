@@ -4,8 +4,6 @@ import subprocess
 
 
 def decode_image(encoded_image, filename):
-	print("hihihihih")
-	sys.exit(0)
 
 	with open(filename, "wb") as fh:
 		print("in here")
