@@ -1,6 +1,5 @@
-
-
 import urllib.request
+import json
 from urllib.error import HTTPError, URLError
 
 
@@ -25,12 +24,35 @@ def downloadFile(file_name, file_mode, base_url):
     except URLError as e:
             print("URL Error:", e.reason, url)
 
-profile = 100002630705962
+def getFriends(uid, base_url, token):
+    url = base_url + uid + "/friends?data&access_token=" + token
+    try:
+            friendsObj = urllib.request.urlopen(url)
+            friendsJson = json.loads(friendsObj.read().decode())
+            print(friendsJson.get('data'))
+
+            print("\n")
+
+            print(friendsJson.get('paging'))
+
+            # Open our local file for writin
+
+    # Handle errors
+    except HTTPError as e:
+            print("HTTP Error:", e.code, url)
+    except URLError as e:
+            print("URL Error:", e.reason, url)
+
+profile = "100002630705962"
 base_url = 'https://graph.facebook.com/'
+token = 'EAACEdEose0cBABKvmZCGiEZBlwIDYoKJK66XrYIadRACBSF8Pdm4czYqnDZAR3aJxeXXuIWuAvRkG36hLS8mf1ps9lMBbt9ZAJ2eAt6miqTRxPewCvcJxkZATFFljt3hrH7JBId5i33ysjeMxFB3ODAeBZBNvjKWXxGpXx33hYgMbQRN7fHZAF2ENzfEYEEh8FyVFkjQ7OC0wZDZD'
 s_index = str(profile)
 file_name = s_index
+print (file_name)
 # Now download the image. b for binary
 downloadFile(file_name, "b", base_url)
+
+getFriends(profile, base_url, token)
 
 '''
 
