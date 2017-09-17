@@ -17,9 +17,9 @@ def decode_image(encoded_image, filename):
 		# subprocess.call(["git", "push"], shell=True)
 
 
-		#f = open("./blah.txt", "w")
-		subprocess.call('../upload.sh', shell=True)
-		#blah.wait()
+		f = open("./blah.txt", "w")
+		blah = subprocess.call('../upload.sh', shell=True, stdout=f)
+		blah.wait()
 		#print blah.returncode
 		time.sleep(3)
 		#f.close()
