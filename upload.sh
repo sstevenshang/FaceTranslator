@@ -7,13 +7,16 @@ REPO_DIR=/Users/campionfellin/Desktop/hackmit/FaceTranslator
 
 cd ${REPO_DIR};
 
+${GIT} config --global user.name "campionfellin"
+${GIT} config --global user.email "campionfellin@gmail.com"
+
 ${GIT} rm -r --cached .;
 
 ${GIT} add .;
 
 ${GIT} commit -m "uploading woo";
 
-${GIT} push;
+${GIT} push -u origin master remote;
 
 sleep 2 
 
