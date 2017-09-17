@@ -36,8 +36,8 @@ class NetworkController: NSObject {
     
     func sendImage(image: UIImage, completionHandler: @escaping ((_ error: networkErrors?)->())) {
         
-        //startNetworkRequestAlamofire(urlString: "http://f64213b6.ngrok.io", image: image, completionHandler: completionHandler)
-        startNetworkRequest(urlString: "http://f64213b6.ngrok.io", image: image, completionHandler: completionHandler)
+        //startNetworkRequestAlamofire(urlString: "http://eb987564.ngrok.io", image: image, completionHandler: completionHandler)
+        startNetworkRequest(urlString: "http://eb987564.ngrok.io", image: image, completionHandler: completionHandler)
         
     }
     
@@ -87,7 +87,7 @@ class NetworkController: NSObject {
         }
         let base64String = imageData.base64EncodedString(options: Data.Base64EncodingOptions.init(rawValue: 0))
         let filename = "face\(NetworkController.imageRequestCount).jpg"
-        let params = ["image":[ "content_type": "image/jpeg", "filename":"\(filename)", "file_data": "hi"]]//base64String]]
+        let params = ["image":[ "content_type": "image/jpeg", "filename":"\(filename)", "file_data": base64String]]
         
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions.init(rawValue: 0))
