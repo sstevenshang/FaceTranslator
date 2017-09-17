@@ -104,15 +104,6 @@ rm 'detect_faces.py'
 rm 'index.html'
 rm 'nodeserver/.DS_Store'
 rm 'nodeserver/blah.txt'
-rm 'nodeserver/face0.jpg'
-rm 'nodeserver/face1.jpg'
-rm 'nodeserver/face2.jpg'
-rm 'nodeserver/face3.jpg'
-rm 'nodeserver/face4.jpg'
-rm 'nodeserver/face5.jpg'
-rm 'nodeserver/face6.jpg'
-rm 'nodeserver/face7.jpg'
-rm 'nodeserver/face8.jpg'
 rm 'nodeserver/imagedata'
 rm 'nodeserver/imagedata.txt'
 rm 'nodeserver/index.js'
@@ -1166,8 +1157,3 @@ rm 'steven.jpg'
 rm 'test.py'
 rm 'test.pyc'
 rm 'upload.sh'
-[master aec5470] uploading woo
- 4 files changed, 2 insertions(+), 1 deletion(-)
- create mode 100644 nodeserver/face9.jpg
- rewrite nodeserver/imagedata.txt (79%)
-done
