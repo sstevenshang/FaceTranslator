@@ -47,7 +47,7 @@ class FaceRecViewController: UIViewController {
     
     @IBAction func restartButtonPressed(_ sender: Any) {
         self.dismiss(animated: true) {
-            self.networkManager.stopNetworkRequest()
+            self.networkManager.stopSending()
         }
     }
     

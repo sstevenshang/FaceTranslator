@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E8A6513BD744DBA09B62F7F /* Pods_MITHackFaceRec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5E9888F41FDDB0506124523 /* Pods_MITHackFaceRec.framework */; };
+		6EC470365AA84B948A1B259C /* Pods_MITHackFaceRecTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F3ADBD01019B496D5AF61A /* Pods_MITHackFaceRecTests.framework */; };
 		B5201E851F6D9DCF0006E945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5201E841F6D9DCF0006E945 /* AppDelegate.swift */; };
 		B5201E871F6D9DCF0006E945 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5201E861F6D9DCF0006E945 /* ViewController.swift */; };
 		B5201E8A1F6D9DCF0006E945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5201E881F6D9DCF0006E945 /* Main.storyboard */; };
@@ -17,6 +19,7 @@
 		B5201EA81F6D9DCF0006E945 /* MITHackFaceRecUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5201EA71F6D9DCF0006E945 /* MITHackFaceRecUITests.swift */; };
 		B5201EB61F6DADCF0006E945 /* FaceRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5201EB51F6DADCF0006E945 /* FaceRecViewController.swift */; };
 		B5201EB81F6DBF230006E945 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5201EB71F6DBF230006E945 /* NetworkController.swift */; };
+		BBFBA17F6F3044A0E465C6CC /* Pods_MITHackFaceRecUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FECE13B1A5D96E32ED4AF609 /* Pods_MITHackFaceRecUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		471155C01D6D95FA433608CA /* Pods-MITHackFaceRecTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MITHackFaceRecTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MITHackFaceRecTests/Pods-MITHackFaceRecTests.release.xcconfig"; sourceTree = "<group>"; };
+		71027B3CF7648A6FDDC17CD1 /* Pods-MITHackFaceRecUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MITHackFaceRecUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MITHackFaceRecUITests/Pods-MITHackFaceRecUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7BE6A3496CF4987B469713D3 /* Pods-MITHackFaceRecTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MITHackFaceRecTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MITHackFaceRecTests/Pods-MITHackFaceRecTests.debug.xcconfig"; sourceTree = "<group>"; };
+		87F3ADBD01019B496D5AF61A /* Pods_MITHackFaceRecTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MITHackFaceRecTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		909CD0677FB53A4DDE692F6E /* Pods-MITHackFaceRec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MITHackFaceRec.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MITHackFaceRec/Pods-MITHackFaceRec.debug.xcconfig"; sourceTree = "<group>"; };
+		AF6D5373B451368299B9E846 /* Pods-MITHackFaceRecUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MITHackFaceRecUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MITHackFaceRecUITests/Pods-MITHackFaceRecUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5201E811F6D9DCF0006E945 /* MITHackFaceRec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MITHackFaceRec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5201E841F6D9DCF0006E945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5201E861F6D9DCF0006E945 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +62,9 @@
 		B5201EA91F6D9DCF0006E945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5201EB51F6DADCF0006E945 /* FaceRecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceRecViewController.swift; sourceTree = "<group>"; };
 		B5201EB71F6DBF230006E945 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		B5E9888F41FDDB0506124523 /* Pods_MITHackFaceRec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MITHackFaceRec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B47A4A525A1238F6297ECA /* Pods-MITHackFaceRec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MITHackFaceRec.release.xcconfig"; path = "Pods/Target Support Files/Pods-MITHackFaceRec/Pods-MITHackFaceRec.release.xcconfig"; sourceTree = "<group>"; };
+		FECE13B1A5D96E32ED4AF609 /* Pods_MITHackFaceRecUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MITHackFaceRecUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8A6513BD744DBA09B62F7F /* Pods_MITHackFaceRec.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EC470365AA84B948A1B259C /* Pods_MITHackFaceRecTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBFBA17F6F3044A0E465C6CC /* Pods_MITHackFaceRecUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54B9850820F0BB9A2525CA95 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				909CD0677FB53A4DDE692F6E /* Pods-MITHackFaceRec.debug.xcconfig */,
+				C0B47A4A525A1238F6297ECA /* Pods-MITHackFaceRec.release.xcconfig */,
+				7BE6A3496CF4987B469713D3 /* Pods-MITHackFaceRecTests.debug.xcconfig */,
+				471155C01D6D95FA433608CA /* Pods-MITHackFaceRecTests.release.xcconfig */,
+				AF6D5373B451368299B9E846 /* Pods-MITHackFaceRecUITests.debug.xcconfig */,
+				71027B3CF7648A6FDDC17CD1 /* Pods-MITHackFaceRecUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A3F6CDBFB441E15B0D88905 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5E9888F41FDDB0506124523 /* Pods_MITHackFaceRec.framework */,
+				87F3ADBD01019B496D5AF61A /* Pods_MITHackFaceRecTests.framework */,
+				FECE13B1A5D96E32ED4AF609 /* Pods_MITHackFaceRecUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B5201E781F6D9DCF0006E945 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +125,8 @@
 				B5201E9B1F6D9DCF0006E945 /* MITHackFaceRecTests */,
 				B5201EA61F6D9DCF0006E945 /* MITHackFaceRecUITests */,
 				B5201E821F6D9DCF0006E945 /* Products */,
+				54B9850820F0BB9A2525CA95 /* Pods */,
+				7A3F6CDBFB441E15B0D88905 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5201EAC1F6D9DCF0006E945 /* Build configuration list for PBXNativeTarget "MITHackFaceRec" */;
 			buildPhases = (
+				FED7F471D64F1813E121E911 /* [CP] Check Pods Manifest.lock */,
 				B5201E7D1F6D9DCF0006E945 /* Sources */,
 				B5201E7E1F6D9DCF0006E945 /* Frameworks */,
 				B5201E7F1F6D9DCF0006E945 /* Resources */,
+				51D2E2D64CDF842558720805 /* [CP] Embed Pods Frameworks */,
+				A172F88A478C57C71E61A78C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5201EAF1F6D9DCF0006E945 /* Build configuration list for PBXNativeTarget "MITHackFaceRecTests" */;
 			buildPhases = (
+				A61747815F1AE189A72C46EB /* [CP] Check Pods Manifest.lock */,
 				B5201E941F6D9DCF0006E945 /* Sources */,
 				B5201E951F6D9DCF0006E945 /* Frameworks */,
 				B5201E961F6D9DCF0006E945 /* Resources */,
+				A6CDD3D10906A1E8E2FB8A4C /* [CP] Embed Pods Frameworks */,
+				13DC75E3F4CD129A5149E60F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5201EB21F6D9DCF0006E945 /* Build configuration list for PBXNativeTarget "MITHackFaceRecUITests" */;
 			buildPhases = (
+				A50A8ADA1AF2431E11D85B0E /* [CP] Check Pods Manifest.lock */,
 				B5201E9F1F6D9DCF0006E945 /* Sources */,
 				B5201EA01F6D9DCF0006E945 /* Frameworks */,
 				B5201EA11F6D9DCF0006E945 /* Resources */,
+				5ECA38B44C4FF8548D50CB1E /* [CP] Embed Pods Frameworks */,
+				D1FD3C767D0A912B3B0AC32C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +314,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13DC75E3F4CD129A5149E60F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MITHackFaceRecTests/Pods-MITHackFaceRecTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51D2E2D64CDF842558720805 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MITHackFaceRec/Pods-MITHackFaceRec-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MITHackFaceRec/Pods-MITHackFaceRec-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5ECA38B44C4FF8548D50CB1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MITHackFaceRecUITests/Pods-MITHackFaceRecUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A172F88A478C57C71E61A78C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MITHackFaceRec/Pods-MITHackFaceRec-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A50A8ADA1AF2431E11D85B0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MITHackFaceRecUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A61747815F1AE189A72C46EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MITHackFaceRecTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6CDD3D10906A1E8E2FB8A4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MITHackFaceRecTests/Pods-MITHackFaceRecTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1FD3C767D0A912B3B0AC32C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MITHackFaceRecUITests/Pods-MITHackFaceRecUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FED7F471D64F1813E121E911 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MITHackFaceRec-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B5201E7D1F6D9DCF0006E945 /* Sources */ = {
@@ -427,6 +626,7 @@
 		};
 		B5201EAD1F6D9DCF0006E945 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 909CD0677FB53A4DDE692F6E /* Pods-MITHackFaceRec.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WK3VAH28UA;
@@ -440,6 +640,7 @@
 		};
 		B5201EAE1F6D9DCF0006E945 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B47A4A525A1238F6297ECA /* Pods-MITHackFaceRec.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WK3VAH28UA;
@@ -453,6 +654,7 @@
 		};
 		B5201EB01F6D9DCF0006E945 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BE6A3496CF4987B469713D3 /* Pods-MITHackFaceRecTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +670,7 @@
 		};
 		B5201EB11F6D9DCF0006E945 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 471155C01D6D95FA433608CA /* Pods-MITHackFaceRecTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -483,6 +686,7 @@
 		};
 		B5201EB31F6D9DCF0006E945 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF6D5373B451368299B9E846 /* Pods-MITHackFaceRecUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = WK3VAH28UA;
@@ -497,6 +701,7 @@
 		};
 		B5201EB41F6D9DCF0006E945 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71027B3CF7648A6FDDC17CD1 /* Pods-MITHackFaceRecUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = WK3VAH28UA;

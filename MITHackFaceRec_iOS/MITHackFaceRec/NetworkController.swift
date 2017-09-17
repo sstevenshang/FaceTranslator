@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 protocol NetworkControllerProtocol {
     func displayResult(name: String)
@@ -34,8 +35,31 @@ class NetworkController: NSObject {
     private var currentTask: URLSessionDataTask?
     
     func sendImage(image: UIImage, completionHandler: @escaping ((_ error: networkErrors?)->())) {
-
-        startNetworkRequest(urlString: "18.10.4.234", image: image, completionHandler: completionHandler)
+        
+        startNetworkRequestAlamofire(urlString: "18.10.4.234", image: image, completionHandler: completionHandler)
+    }
+    
+    private func startNetworkRequestAlamofire(urlString: String, image: UIImage, completionHandler: @escaping ((_ error: networkErrors?)->())) {
+        
+        if let imageData = UIImageJPEGRepresentation(image, 0.9) {
+            Alamofire.upload(imageData, to: urlString).response(completionHandler: { (response) in
+                guard let data = response.data else {
+                    print("Received no data back")
+                    return
+                }
+                
+                if let name = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as String? {
+                    self.delegate?.displayResult(name: name)
+                }
+            })
+        } else {
+            print("Failed to get JPEG")
+            return
+        }
+    }
+    
+    func stopSending() {
+        //
     }
     
     private func startNetworkRequest(urlString: String, image: UIImage, completionHandler: @escaping ((_ error: networkErrors?)->())) {
